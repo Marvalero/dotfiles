@@ -5,15 +5,17 @@ export PS1="\[\e[91m\]\$?\[\e[00m\][\t]\[\e[32m\]\w \[\e[91m\]\$(parse_git_branc
 
 
 #Update jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-export JAVA_HOME=$(jenv javahome)
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
+# export JAVA_HOME=$(jenv javahome)
 
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Configure NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 nvm use 22
 
